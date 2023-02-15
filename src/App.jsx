@@ -1,7 +1,12 @@
 import "./App.css";
 import axios from "axios"; 
 function App() {
-    const url = "https://localhost:7280/api/usuarios" 
+    const url = "https://localhost:7280/api/usuarios"
+    const mostrar =()=>{
+      axios.get(url).then(Response=>{
+        console.log(Response.data);
+      })
+    }
   return (
     <>
     <div class="d-grid gap-2 col-6 mx-auto">
@@ -88,7 +93,8 @@ function App() {
       <td>1043114194</td>
       <td>324348343</td>
       <td>jpenaranda633@gmail.com</td>
-      <td><button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#Modal">Editar</button>&nbsp;<button type="button" class="btn btn-outline-danger" >Eliminar</button> </td>
+      <td><button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#Modal">Editar</button>&nbsp;
+      <button type="button" class="btn btn-outline-danger" onClick={mostrar}>Eliminar</button> </td>
     </tr>
   </tbody>
 </table>
