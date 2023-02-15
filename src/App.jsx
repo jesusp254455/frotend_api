@@ -1,6 +1,7 @@
 import "./App.css";
-
+import axios from "axios"; 
 function App() {
+    const url = "https://localhost:7280/api/usuarios" 
   return (
     <>
     <div class="d-grid gap-2 col-6 mx-auto">
