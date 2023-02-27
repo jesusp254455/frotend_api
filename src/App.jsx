@@ -4,7 +4,7 @@ import axios from "axios";
 function App() {
     const url = "https://localhost:7280/api/usuarios"
   
-    const [users, setusers] = useState([]) 
+    const [users, setusers] = useState([])
     const [id,setid] = useState('')
     const [nombre, setnombre]=useState('')
     const [apellido, setapellido]=useState('')
